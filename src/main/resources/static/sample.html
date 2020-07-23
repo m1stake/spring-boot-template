@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>生化</title>
+   <style type="text/css">
+.tables{ font-size: 12px;  padding: :20px ; margin:0 auto; text-align: center;color: #000;border: 1px solid #AAAAAA;}
+.tables tr{line-height: 24px}
+.tables td,.tables th{min-width: 50px}
+.tables td{line-height: 24px;min-height: 24px}
+.tables tr:hover{background: #F5F5F5}
+.tables tr:nth-child(even){background: #F5F5F5}
+.tables th{text-align: center;color: #786C73;background: #F1F1F1}
+   </style>
+</head>
+<body>
+<table class="tables" border="1px" cellspacing="0px" style="border-collapse:collapse">
+                <tbody>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>公司名称</th>
+                        <th>部门</th>
+                        <th>姓名</th>
+                    </tr>
+                </tbody>
+                <tbody id="tbody"></tbody>
+             </table>
+
+<script src="/static/js/jquery-3.5.1.js"></script>
+<script>
+    let dataList = window.parent.up_resp;
+
+    for (let ps of dataList) {
+        $('#tbody').append(`
+    <tr>
+                <td>${ps.serialNum}</td>
+                <td>${ps.username}</td>
+                <td>${ps.companyName}</td>
+                <td>${ps.department}</td>
+                <td>${ps.name}</td>
+    </tr>
+    `)
+    }
+</script>
+
+</body>
+</html>

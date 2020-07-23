@@ -1,0 +1,14 @@
+<style>
+
+/*table { border: 1px; }*/
+/*table td { word-break: keep-all; padding-left: 10px; padding-right: 10px;}*/
+/*table th { word-break: keep-all; }*/
+
+.tables{ font-size: 12px;  padding: :20px ; margin:0 auto; text-align: center;color: #000;border: 1px solid #AAAAAA;width:2000px;}
+.tables tr{line-height: 24px}
+.tables td,.tables th{ min-width: 50px; word-break: keep-all; padding: 0 8px; }
+.tables td{line-height: 24px;min-height: 24px}
+.tables tr:hover{background: #F5F5F5}
+.tables tr:nth-child(even){background: #F5F5F5}
+.tables th{text-align: center;color: #786C73;background: #F1F1F1}
+</style>

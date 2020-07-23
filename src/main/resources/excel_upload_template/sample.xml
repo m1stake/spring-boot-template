@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workbook>
+    <worksheet idx="0">
+        <section startRow="0" endRow="1">
+        </section>
+        <loop startRow="2" endRow="2" items="msgList" var="m" varType="com.songfeifan.samples.sbt.model.dto.SampleMsgDTO">
+            <section startRow="2" endRow="2">
+                <mapping row="2" col="0">m.username</mapping>
+                <mapping row="2" col="1">m.serialNum</mapping>
+                <mapping row="2" col="2">m.companyName</mapping>
+                <mapping row="2" col="3">m.department</mapping>
+                <mapping row="2" col="4">m.name</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                    <cellcheck offset="0">
+                    </cellcheck>
+                </rowcheck>
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>

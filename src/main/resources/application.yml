@@ -1,0 +1,62 @@
+
+server:
+  port: 8077
+  servlet:
+    session:
+      timeout: 1800
+
+spring:
+  http:
+    encoding:
+      force-response: true
+  profiles:
+    active: dev1
+
+
+we-chat-qy:
+  tokenEndpoint: https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=%s&corpsecret=%s
+  userInfoEndpoint: https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=%s&code=%s
+  sendMsgEndpoint: https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=%s
+  mediaUploadEndpoint: https://qyapi.weixin.qq.com/cgi-bin/media/upload?access_token=%s&type=%s
+
+  # jf
+  corpid: # corpid
+  app:
+    jf:
+      secret: # secret
+      agentId: 1000004
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    root: info
+
+dozer:
+  mapping-files: classpath:/dozer/dozer-mapping.xml
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:sqlserver://localhost;DatabaseName=automessage
+    username: u
+    password: p
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+---
+spring:
+  profiles: dev1
+  datasource:
+    url: jdbc:h2:file:./h2/ps;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
