@@ -30,6 +30,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- for war packaging -->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
@@ -154,7 +155,8 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>-->
+            <!-- for war packaging -->
+            <!--<plugin>  -->
                 <!--<groupId>org.apache.maven.plugins</groupId>-->
                 <!--<artifactId>maven-war-plugin</artifactId>-->
                 <!--<configuration>-->

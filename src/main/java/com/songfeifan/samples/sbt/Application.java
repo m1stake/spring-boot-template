@@ -22,6 +22,8 @@ public class Application extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+        return application
+                .listeners(new AppContextUtil.AppContextStartedListener())
+                .sources(Application.class);
     }
 }
