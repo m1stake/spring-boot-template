@@ -1,8 +1,3 @@
-/*
- * @Title: ResponseAdvice
- * @author songfeifan-南昌泽诺信息科技有限公司
- * @date 18-9-18 下午5:09
- */
 package com.songfeifan.samples.sbt.advice;
 
 import com.songfeifan.samples.sbt.model.vo.R;

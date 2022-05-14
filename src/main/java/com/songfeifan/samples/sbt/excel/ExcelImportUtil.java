@@ -1,7 +1,3 @@
-/*
- * @author songfeifan-南昌泽诺信息科技有限公司
- * @date 2019/8/29 15:39
- */
 package com.songfeifan.samples.sbt.excel;
 
 import com.songfeifan.samples.sbt.util.ClassPathUtil;

@@ -1,8 +1,3 @@
-/**
- * @Title: SwaggerConfig
- * @author wanchao-南昌泽诺信息科技有限公司
- * @date 2018/1/31 12:22
- */
 package com.songfeifan.samples.sbt.config;
 
 import org.springframework.context.annotation.Bean;

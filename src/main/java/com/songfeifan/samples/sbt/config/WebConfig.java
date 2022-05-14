@@ -1,8 +1,3 @@
-/*
- * @Title: ShiroConfig
- * @author wanchao-南昌泽诺信息科技有限公司
- * @date 2018/7/26 15:15
- */
 package com.songfeifan.samples.sbt.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,7 +1,4 @@
-/*
- * @author songfeifan-南昌泽诺信息科技有限公司
- * @date 2019/3/12 14:47
- */
+
 package com.songfeifan.samples.sbt.wx;
 
 import lombok.Data;

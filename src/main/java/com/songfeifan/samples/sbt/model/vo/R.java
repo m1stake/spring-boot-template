@@ -1,7 +1,3 @@
-/*
- * @author songfeifan-南昌泽诺信息科技有限公司
- * @date 2018/11/23 14:07
- */
 package com.songfeifan.samples.sbt.model.vo;
 
 import lombok.Data;
