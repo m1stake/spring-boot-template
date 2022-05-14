@@ -31,7 +31,7 @@ public class R<T> {
         this.data = data;
     }
 
-    public static R error(int code, String msg) {
-        return new R(code, msg);
+    public static R<?> error(int code, String msg) {
+        return new R<>(code, msg);
     }
 }

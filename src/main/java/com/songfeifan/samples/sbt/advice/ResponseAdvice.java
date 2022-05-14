@@ -14,6 +14,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @RestControllerAdvice
 public class ResponseAdvice implements ResponseBodyAdvice<Object> {
@@ -22,12 +23,13 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
 
     private static final List<String> ignoreTypes = Arrays.asList(
             R.class.getName(),
+            String.class.getName(),
             ResponseEntity.class.getName()
     );
 
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
-        String returnTypeName = returnType.getMethod().getReturnType().getTypeName();
+        String returnTypeName = Objects.requireNonNull(returnType.getMethod()).getReturnType().getTypeName();
         for (String ignoreType: ignoreTypes) {
             if (ignoreType.equals(returnTypeName)) {
                 return false;
@@ -37,7 +39,7 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
     }
 
     @Override
-    public R beforeBodyWrite(
+    public R<?> beforeBodyWrite(
             Object body, MethodParameter returnType, MediaType selectedContentType,
             Class<? extends HttpMessageConverter<?>> selectedConverterType,
             ServerHttpRequest request, ServerHttpResponse response) {
